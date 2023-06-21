@@ -1,4 +1,4 @@
-<h1 align="center">Food Explorer</h1>
+<h1 align="center">Food Explorer - Backend</h1>
 
 <br>
 
