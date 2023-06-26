@@ -1,3 +1,4 @@
+const { hash } = require("bcryptjs")
 const CustomError = require("../utils/CustomError")
 const knex = require("../database/knex")
 
@@ -15,10 +16,12 @@ class UserControllers {
       throw new CustomError("Este e-mail já está em uso")
     }
 
+    const hashedPassword = await hash(password, 8)
+
     await knex("users").insert({
       name,
       email,
-      password
+      password: hashedPassword
     })
 
     return response.status(201).json()
