@@ -23,7 +23,6 @@ class UserControllers {
       email,
       password: hashedPassword
     })
-
     return response.status(201).json()
   }
 }
