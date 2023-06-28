@@ -6,7 +6,7 @@ const dishRoutes = require("./dishes.routes")
 const routes = Router()
 
 routes.use("/user", userRoutes)
-routes.use("/new-dish", dishRoutes)
+routes.use("/dish", dishRoutes)
 
 module.exports = routes
 
